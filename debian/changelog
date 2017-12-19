@@ -1,0 +1,41 @@
+clinfo (0.0.20130513-2) unstable; urgency=medium
+
+  [ Andreas Beckmann ]
+  * Set Maintainer to "Debian OpenCL Maintainers" with Simon's permission.
+  * Add Simon Richter and myself to Uploaders.
+  * Import packaging into git. Add Vcs-* URLs.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+  [ Rebecca N. Palmer ]
+  * Don't exit on CL_DEVICE_NOT_FOUND (Closes: #767985)
+  * Fix typo in "endianness".
+
+ -- Andreas Beckmann <anbe@debian.org>  Thu, 13 Nov 2014 12:16:40 +0100
+
+clinfo (0.0.20130513-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Andreas Boll ]
+  * Drop unused CL_DEVICE_BUILT_IN_KERNELS query, fixes clinfo output on
+    OpenCL 1.1 drivers (Closes: #721103).
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 15 Sep 2014 18:02:53 +0200
+
+clinfo (0.0.20130513-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Simon Richter <sjr@debian.org>  Mon, 13 May 2013 19:52:36 +0200
+
+clinfo (0.0.20130409-2) unstable; urgency=low
+
+  * Conflict/Replace amd-clinfo (Closes: #706093)
+
+ -- Simon Richter <sjr@debian.org>  Fri, 26 Apr 2013 12:02:59 +0200
+
+clinfo (0.0.20130409-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Simon Richter <sjr@debian.org>  Tue, 09 Apr 2013 22:38:26 +0200

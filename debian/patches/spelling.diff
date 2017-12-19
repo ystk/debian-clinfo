@@ -1,0 +1,14 @@
+Description: Fix typo
+
+Origin: lintian
+--- clinfo-0.0.20130513.orig/output_amd_compat.cpp
++++ clinfo-0.0.20130513/output_amd_compat.cpp
+@@ -96,7 +96,7 @@ void output_amd_compat_device(device con
+         std::cout << "  Error correction support:\t\t\t " << d.error_correction_support << std::endl;
+         std::cout << "  Unified memory for Host and Device:\t\t " << d.host_unified_memory << std::endl;
+         std::cout << "  Profiling timer resolution:\t\t\t " << d.profiling_timer_resolution << std::endl;
+-        std::cout << "  Device endianess:\t\t\t\t " << (d.endian_little ? "Little" : "Big") << std::endl;
++        std::cout << "  Device endianness:\t\t\t\t " << (d.endian_little ? "Little" : "Big") << std::endl;
+         std::cout << "  Available:\t\t\t\t\t " << (d.available ? "Yes":"No") << std::endl;
+         std::cout << "  Compiler available:\t\t\t\t " << (d.compiler_available ? "Yes":"No") << std::endl;
+         std::cout << "  Execution capabilities:\t\t\t\t " << std::endl;

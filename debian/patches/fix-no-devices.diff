@@ -1,0 +1,20 @@
+Description: Don't error out on CL_DEVICE_NOT_FOUND
+
+If an ICD is installed on hardware it doesn't support, it will
+return CL_DEVICE_NOT_FOUND and 0 devices.
+This is expected behaviour, and should not be a fatal error.
+
+Author: Rebecca Palmer <rebecca_palmer@zoho.com>
+Bug-Debian: https://bugs.debian.org/767985
+
+--- clinfo-0.0.20130513.orig/platform.cpp
++++ clinfo-0.0.20130513/platform.cpp
+@@ -38,6 +38,8 @@ void platform::load()
+ 
+         cl_uint num_device_ids;
+         cl_int rc = clGetDeviceIDs(id, CL_DEVICE_TYPE_ALL, 0, 0, &num_device_ids);
++        if(rc == CL_DEVICE_NOT_FOUND)
++                return;
+         if(rc != CL_SUCCESS)
+                 throw rc;
+ 
