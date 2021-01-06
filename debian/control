@@ -1,0 +1,33 @@
+Source: clinfo
+Section: admin
+Priority: optional
+Maintainer: Debian OpenCL Maintainers <pkg-opencl-devel@lists.alioth.debian.org>
+Uploaders:
+ Simon Richter <sjr@debian.org>,
+ Andreas Beckmann <anbe@debian.org>,
+Build-Depends:
+ debhelper (>= 9),
+ ocl-icd-opencl-dev | opencl-dev,
+Standards-Version: 3.9.7
+Homepage: https://github.com/Oblomov/clinfo
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-opencl/clinfo.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-opencl/clinfo.git
+
+Package: clinfo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts:
+ clinfo,
+ amd-clinfo,
+Replaces:
+ clinfo,
+ amd-clinfo,
+Provides:
+ clinfo,
+Description: Query OpenCL system information
+ OpenCL (Open Computing Language) is a multivendor open standard for
+ general-purpose parallel programming of heterogeneous systems that include
+ CPUs, GPUs and other processors.
+ .
+ This package contains a tool that queries the capabilities of the available
+ OpenCL drivers.
